@@ -1,0 +1,46 @@
+P1 DENTAL PARTNERS - RECRUITMENT OUTREACH HOOKS
+
+=== ALUMNI TIES ===
+- "I noticed you're a {SCHOOL} alum — we have an opportunity in {TARGET_CITY}"
+- "As a fellow {SCHOOL} graduate, I wanted to reach out about..."
+- "We have a strong {SCHOOL} alumni network here in {TARGET_CITY}"
+- "{TARGET_CITY} is home to your alma mater, {SCHOOL}"
+
+=== TAX SAVINGS ===
+- "{STATE} tax rates would save you approximately ${TAX_SAVINGS}/year vs. {CURRENT_STATE}"
+- "Moving to {STATE} could mean ${TAX_SAVINGS} in annual tax savings"
+- "Lower cost of living and ${TAX_SAVINGS} in tax benefits compared to {CURRENT_STATE}"
+- "{STATE} offers significant tax advantages for high earners like yourself"
+
+=== FAMILY/SPOUSE TIES ===
+- "I saw your spouse is from {SPOUSE_LOCATION} — closer to family might appeal"
+- "Your LinkedIn mentions {FAMILY_LOCATION} roots — returning to the Midwest?"
+- "With family ties to {REGION}, this could be a homecoming opportunity"
+- "Your spouse's background in {SPOUSE_FIELD} aligns well with {TARGET_CITY}'s growing {INDUSTRY}"
+
+=== GEOGRAPHIC PROXIMITY ===
+- "You're already in {CURRENT_CITY}, just {DISTANCE} from {TARGET_CITY}"
+- "Short relocation from {CURRENT_CITY} — same region, better opportunity"
+- "Midwest location keeps you close to {CURRENT_STATE} connections"
+
+=== CAREER GROWTH ===
+- "Lead endodontist role at a 60+ location network"
+- "Partnership track within 3-5 years"
+- "Clinical autonomy with enterprise support infrastructure"
+- "Practice ownership opportunities as we expand regionally"
+
+=== LIFESTYLE ===
+- "Lower cost of living than {CURRENT_CITY} — same income goes further"
+- "{TARGET_CITY} offers {LIFESTYLE_FEATURE} that you mentioned enjoying"
+- "Family-friendly community with excellent schools"
+- "Vibrant downtown, growing tech scene, affordable housing"
+
+=== SAMPLE COMBINATION HOOKS ===
+Hook 1: Alumni + Tax + Family
+"Hi Dr. {LAST_NAME}, I noticed you're a Notre Dame alum — we have an endodontics opportunity in South Bend (your alma mater town!). Indiana's tax rates would save you ~$18K/year vs. Illinois. Your spouse's LinkedIn shows ties to the Midwest — would you be open to a conversation about returning to the region?"
+
+Hook 2: Location + Career + Lifestyle
+"Dr. {LAST_NAME}, you're currently in {CURRENT_CITY}, just 90 minutes from our South Bend location. We're looking for a lead endodontist with partnership potential. Lower cost of living, excellent schools, and a growing practice network. Worth a conversation?"
+
+Hook 3: School + Family + Tax
+"Dr. {LAST_NAME}, as a {SCHOOL} graduate with family in {FAMILY_LOCATION}, this opportunity might interest you. Lead endo role in {TARGET_CITY}, ${TAX_SAVINGS} in annual tax savings vs. {CURRENT_STATE}, and partnership track. Can we schedule a call?"
