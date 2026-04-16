@@ -2,6 +2,9 @@ import plotly.graph_objects as go
 import streamlit as st
 from agents.base import CandidateProfile, PipelineContext
 
+CHART_TEXT_COLOR = "#1B2F54"
+CHART_GRID_COLOR = "#2D4A6E"
+CHART_BG = "rgba(0,0,0,0)"
 
 FACTOR_LABELS = {
     "proximity": "Proximity",
@@ -34,15 +37,28 @@ def render_radar_chart(candidate: CandidateProfile, weights: dict[str, float]):
         r=values_closed,
         theta=categories_closed,
         fill="toself",
-        fillcolor="rgba(99, 110, 250, 0.2)",
-        line=dict(color="rgb(99, 110, 250)", width=2),
+        fillcolor="rgba(181, 25, 66, 0.15)",
+        line=dict(color="rgb(181, 25, 66)", width=2),
         name=candidate.name,
     ))
 
     fig.update_layout(
         polar=dict(
-            radialaxis=dict(visible=True, range=[0, 100], ticksuffix="%"),
+            bgcolor=CHART_BG,
+            radialaxis=dict(
+                visible=True,
+                range=[0, 100],
+                ticksuffix="%",
+                tickfont=dict(color=CHART_TEXT_COLOR, size=10),
+                gridcolor=CHART_GRID_COLOR,
+            ),
+            angularaxis=dict(
+                tickfont=dict(color=CHART_TEXT_COLOR, size=11),
+                gridcolor=CHART_GRID_COLOR,
+            ),
         ),
+        paper_bgcolor=CHART_BG,
+        font=dict(color=CHART_TEXT_COLOR),
         showlegend=False,
         margin=dict(l=40, r=40, t=20, b=20),
         height=300,
@@ -59,13 +75,13 @@ def render_score_comparison(context: PipelineContext):
     colors = []
     for c in context.candidates:
         if c.score_tier == "Hot Lead":
-            colors.append("#FF4B4B")
+            colors.append("#B51942")
         elif c.score_tier == "Warm Prospect":
-            colors.append("#FFA500")
+            colors.append("#C97A1E")
         elif c.score_tier == "Worth Exploring":
-            colors.append("#FFD700")
+            colors.append("#1EAD65")
         else:
-            colors.append("#CCCCCC")
+            colors.append("#4A5568")
 
     fig = go.Figure()
     fig.add_trace(go.Bar(
@@ -75,16 +91,28 @@ def render_score_comparison(context: PipelineContext):
         marker_color=colors,
         text=[f"{s:.0f}" for s in scores],
         textposition="outside",
-        textfont=dict(size=12),
+        textfont=dict(size=12, color=CHART_TEXT_COLOR),
         cliponaxis=False,
     ))
 
     fig.update_layout(
         xaxis_title="Relocation Score",
-        xaxis=dict(range=[0, 110]),
-        yaxis=dict(autorange="reversed"),
+        xaxis=dict(
+            range=[0, 110],
+            tickfont=dict(color=CHART_TEXT_COLOR),
+            title_font=dict(color=CHART_TEXT_COLOR),
+            gridcolor=CHART_GRID_COLOR,
+        ),
+        yaxis=dict(
+            autorange="reversed",
+            tickfont=dict(color=CHART_TEXT_COLOR),
+            gridcolor=CHART_GRID_COLOR,
+        ),
         margin=dict(l=10, r=40, t=10, b=30),
         height=max(400, len(names) * 40),
         bargap=0.25,
+        paper_bgcolor=CHART_BG,
+        plot_bgcolor=CHART_BG,
+        font=dict(color=CHART_TEXT_COLOR),
     )
     st.plotly_chart(fig, width="stretch")

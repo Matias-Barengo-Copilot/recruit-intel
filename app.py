@@ -20,6 +20,17 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+st.markdown("""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+    html, body, [class*="css"], .stMarkdown, .stMetric label, .stMetric div,
+    .stButton button, .stSelectbox label, .stTextInput label,
+    .stSlider label, .stNumberInput label, .stTabs [data-baseweb="tab"] {
+        font-family: 'Montserrat', sans-serif !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # --- Session State ---
 if "pipeline_context" not in st.session_state:
     st.session_state.pipeline_context = None
@@ -69,7 +80,7 @@ if sidebar["run_clicked"] and not st.session_state.pipeline_running:
 context: PipelineContext | None = st.session_state.pipeline_context
 
 # Header
-st.markdown("# 🔍 Recruit Intel")
+st.markdown("# Recruit Intel")
 st.markdown("*Multi-Agent Provider Recruitment Intelligence Platform — P1 Dental Partners*")
 
 if context:

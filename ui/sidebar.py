@@ -4,9 +4,8 @@ from config import Config
 
 def render_sidebar() -> dict:
     with st.sidebar:
-        st.image("https://img.icons8.com/fluency/96/search-in-list.png", width=60)
-        st.title("Recruit Intel")
-        st.caption("Multi-Agent Provider Recruitment")
+        st.image("assets/logo.png", use_container_width=True)
+        st.caption("Recruit Intel — Multi-Agent Provider Recruitment")
 
         st.divider()
         st.subheader("Search Criteria")

@@ -83,7 +83,7 @@ def _render_flow_diagram(context: PipelineContext):
 
         for i, log in enumerate(context.agent_logs):
             short_name = log.agent_name.replace(" Agent", "").replace(" & Data", "")
-            color = "#90EE90"  # green for completed
+            color = "#1EAD65"  # P1 brand green for completed agents
             dot += f'  n{i} [label="{short_name}\\n{log.duration:.1f}s", fillcolor="{color}"];\n'
 
         for i in range(len(context.agent_logs) - 1):

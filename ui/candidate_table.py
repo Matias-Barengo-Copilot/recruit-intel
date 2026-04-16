@@ -6,7 +6,7 @@ from agents.base import PipelineContext
 TIER_COLORS = {
     "Hot Lead": "🔴",
     "Warm Prospect": "🟠",
-    "Worth Exploring": "🟡",
+    "Worth Exploring": "🟢",
     "Long Shot": "⚪",
 }
 

@@ -22,7 +22,7 @@ def _render_candidate_detail(candidate: CandidateProfile, context: PipelineConte
     tier_colors = {
         "Hot Lead": "red",
         "Warm Prospect": "orange",
-        "Worth Exploring": "blue",
+        "Worth Exploring": "green",
         "Long Shot": "gray",
     }
     color = tier_colors.get(candidate.score_tier, "gray")
