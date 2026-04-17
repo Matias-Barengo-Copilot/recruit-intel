@@ -49,6 +49,8 @@ def _render_candidate_detail(candidate: CandidateProfile, context: PipelineConte
         }
         for label, value in detail_rows.items():
             st.markdown(f"**{label}:** {value}")
+        if candidate.linkedin_url:
+            st.markdown(f"[View on LinkedIn]({candidate.linkedin_url})")
 
     with col2:
         st.markdown("#### Score Breakdown")

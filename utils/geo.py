@@ -22,6 +22,7 @@ CITY_COORDS: dict[str, tuple[float, float]] = {
     "Madison, WI": (43.0731, -89.4012),
     "Muncie, IN": (40.1934, -85.3864),
     "Terre Haute, IN": (39.4667, -87.4139),
+    "New York, NY": (40.7128, -74.0060),
 }
 
 # State abbreviation to full name mapping

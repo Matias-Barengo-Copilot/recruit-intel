@@ -17,6 +17,7 @@ class CandidateProfile:
     spouse_name: Optional[str] = None
     spouse_location: Optional[str] = None
     geographic_ties: Optional[str] = None
+    linkedin_url: Optional[str] = None
     # Enrichment fields
     distance_to_target_miles: Optional[float] = None
     alumni_network_strength: Optional[str] = None

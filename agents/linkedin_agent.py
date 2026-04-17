@@ -43,6 +43,7 @@ class LinkedInAgent(BaseAgent):
                 spouse_name=str(row.get("SpouseName", "")) if pd.notna(row.get("SpouseName")) else None,
                 spouse_location=str(row.get("SpouseLocation", "")) if pd.notna(row.get("SpouseLocation")) else None,
                 geographic_ties=str(row.get("GeographicTies", "")) if pd.notna(row.get("GeographicTies")) else None,
+                linkedin_url=str(row.get("LinkedInURL", "")) if pd.notna(row.get("LinkedInURL")) else None,
                 distance_to_target_miles=distance,
             )
             candidates.append(candidate)
